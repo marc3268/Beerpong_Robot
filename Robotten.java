@@ -91,8 +91,8 @@ public class Robotten {
 
 			if (indput == Button.ID_ENTER) {
 				System.out.println("nuværende styrke: " + Katapult.speed);
-				System.out.println("tryk op for at forøge styrken med 3%");
-				System.out.println("tryk ned for at mindske styrken med 3%");
+				System.out.println("OP for at forøge styrken med 3%");
+				System.out.println("NED ned for at mindske styrken med 3%");
 
 				boolean juster = true;
 
