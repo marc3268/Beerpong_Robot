@@ -11,13 +11,13 @@ public class Katapult {
 	static EV3LargeRegulatedMotor Kast1 = new EV3LargeRegulatedMotor(MotorPort.C);
 
 	// Mål i cm
-	static double KOP_HØJDE = 9;
-	static double KOP_RADIUS = 0.5;
+	static double KOP_HØJDE = 6;
+	static double KOP_RADIUS = 5;
 
 	static double HØJDE_SKUD = 40;
 	static double ARM_LÆNGDE = 22;
 	static double AFSTAND_SENSOR = 31; // fra slippepunkt til sensor
-	static double vinkel = Math.toRadians(40);
+	static double vinkel = Math.toRadians(30);
 
 	static int grader = 100; // hvor langt lademekanismen skal rotere
 	static double g = -981; // tyngdekraft i cm/s^2
@@ -25,7 +25,7 @@ public class Katapult {
 	static int acc; // enhed: degress/second/second, en kraft
 
 	static double afstand = Robotten.Afstand_Kørt;
-	static double x = afstand + AFSTAND_SENSOR + Robotten.sensor_stop_cm + KOP_RADIUS; // totale afstand i x retning
+	static double x = afstand + AFSTAND_SENSOR + Robotten.sensor_stop_cm + KOP_RADIUS; // totale afstand i x retning fra skud til mål
 
 	
 	// metode til at finde tiden bolden skal være i luften før den rammer koppen,
@@ -83,7 +83,7 @@ public class Katapult {
 
 	}
 
-	//Metoden fungere ikke med harware
+	//Metoden fungerer ikke med hardware
 	static void AutoReset() {
 		Kast.setSpeed(20);
 		Kast1.setSpeed(20);
