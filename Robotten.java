@@ -45,10 +45,11 @@ public class Robotten {
 		}
 
 		System.out.println(" " + -pilot.getMovement().getDistanceTraveled());
+		
 		Afstand_Kørt = -pilot.getMovement().getDistanceTraveled();
+		System.out.println("afstand til kop" + Afstand_Kørt+sensor_stop_cm );
 
 	}
-
 
 
 	public static void main(String[] args) {
@@ -63,8 +64,8 @@ public class Robotten {
 		Katapult.set_acc();
 		
 		System.out.println("vektor cm pr. sek: " +(int)Katapult.Hastighed_cm_sek());
-		System.out.println("rotationshastighed, grader:" +(int)Katapult.speed);
-		System.out.println("afstand til kop"+(int)Katapult.x);
+		System.out.println("rotationshastighed, grader: " +(int)Katapult.speed);
+		System.out.println("afstand til kop "+(int)Katapult.x);
 
 		Button.waitForAnyPress();
 
@@ -79,7 +80,8 @@ public class Robotten {
 	
 		
 		Katapult.SKYD();// affyrer bolden
-		//Katapult.AutoReset();
+		
+		//Katapult.AutoReset();  //virker
 		
 		boolean miss = true;
 		
