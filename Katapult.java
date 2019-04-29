@@ -11,8 +11,8 @@ public class Katapult {
 	static EV3LargeRegulatedMotor Kast1 = new EV3LargeRegulatedMotor(MotorPort.C);
 
 	// Mål i cm
-	static double KOP_HØJDE = 6;
-	static double KOP_RADIUS = 5;
+	static double KOP_HØJDE = 12;
+	static double KOP_RADIUS = 4.5;
 
 	static double HØJDE_SKUD = 40;
 	static double ARM_LÆNGDE = 22;
@@ -39,6 +39,7 @@ public class Katapult {
 		return p3;
 
 	}
+	
 
 	static double Hastighed_cm_sek() {
 		double V_x = x / Tid();
@@ -50,11 +51,13 @@ public class Katapult {
 		speed = (Hastighed_cm_sek() / omkreds) * 360;
 		return speed;
 	}
+	
 
 	// udledt fra potensregrssion af data fra forsøg. se evt bilag
 	static void set_acc() {
 		acc = (int) (2.38 * Math.pow(Hastighed_cm_sek(), 1.27));
 	}
+	
 
 	static void SKYD() {
 		Kast.setSpeed(100);
@@ -82,6 +85,7 @@ public class Katapult {
 		Delay.msDelay(1000);
 
 	}
+	
 
 	//Metoden fungerer ikke med hardware
 	static void AutoReset() {
@@ -106,6 +110,7 @@ public class Katapult {
 		Kast.setStallThreshold(50, 1000);
 
 	}
+	
 
 	static void ManueltReset() {
 
@@ -114,6 +119,8 @@ public class Katapult {
 
 	}
 
+	
+	
 	public static void main(String[] args) {
 
 	}
